@@ -1,0 +1,307 @@
+/* natural box model */
+html {
+  box-sizing: border-box;
+  background-color: rgb(142, 164, 136);
+  font-family: 'Bebas Neue', cursive;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+/* UTILITIES */
+
+/* hides an element on screen, but not from screen readers */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}
+
+/* no break */
+.nobr {
+  white-space: nowrap;
+}
+
+/* START STYLES HERE */
+
+/* my headshot */
+.me {
+  background: url(/Users/christinacolon/Desktop/i360/Final-ColonChristina/images/cc.jpg);
+  background-size: 220px;
+  min-height: 600px;
+  min-width: 600px;
+  border-radius: 50%;
+  border: solid black 5px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 588px;
+  vertical-align: auto;
+  position: absolute;
+}
+
+.kayak {
+  background: url(/Users/christinacolon/Desktop/i360/Final-ColonChristina/images/kayak.jpeg);
+  background-size: 100px;
+  min-height: 400px;
+  min-width: 400px;
+  border-radius: 50%;
+  border: solid black 5px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 388px;
+  vertical-align: auto;
+  position: absolute;
+}
+
+
+/*navigation bar*/
+nav {
+  /* margin set to separate each navbar so you can better see all examples */
+  margin: 0 0 3.0em;
+  /* @TO-DO: use flexbox to have menu items sit next to each other */
+  display: flex;
+  flex-flow: row wrap;
+  
+}
+
+/* menu items */
+a {
+  text-decoration: none;
+  color: black;
+  background: grey;
+  padding: 0.5em 1.0em;
+  margin: 0.5em;
+  font-family: 'Bebas Neue', cursive;
+  font-size: 20px;
+  line-height: 2.0em;
+  background-color: grey;
+  float: left;
+}
+
+nav.full-width {
+  /* @TO-DO: write CSS to make nav a solid white bar across the page */
+  /* @TO-DO: add a subtle box shadow on the lower edge of the bar */
+  background-color: grey;
+  box-shadow: 0 2px 5px rgb(0, 0, 0, 0.3);
+  display: flex;
+  justify-content: flex-start;
+  position: fixed;
+}
+
+nav.full-width a:link,
+nav.full-width a:visited {
+  /* set a border the same color as the background if you want to later change the border color */
+  /* otherwise the link will appear to jump when you hover over it as it changes size */
+  border-bottom: 3px solid black;
+}
+
+nav.full-width a:hover,
+nav.full-width a:active {
+  /* @TO-DO: add a bottom border in our accent color */
+  border-bottom: 3px solid rgb(210, 195, 198, 0.9);
+}
+
+nav.centered {
+  /* @TO-DO: center the content horizontally using flexbox */
+  display: flex;
+  justify-content: flex-start; 
+}
+
+nav.centered a:hover,
+nav.centered a:active {
+  /* @TO-DO: make the background 90% white (use alpha channel transparency) */
+  background: rgb(210, 195, 198, 0.9);
+  /* the transition will make this hover effect smooth */
+  transition: all 0.3s;
+  border-bottom: 3px solid rgb(210, 195, 198, 0.9);
+}
+
+nav.sticky {
+  /* @TO-DO: position property set to sticky - set the top coordinate to 0 */
+  position: sticky;
+  top: 0;
+}
+.menu-items{
+  display: flex;
+  flex-flow: row wrap;
+}
+.item{
+  margin: 0;
+}
+nav.right{
+  justify-content: space-between;
+}
+.full-width{
+  display: flex;
+  flex-flow: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* welcome container */
+.welcome {
+  display:block;
+  float: right;
+  max-height: 800px;
+  max-width: 750px;
+  background-color: rgba(240, 255, 255, 50%);
+  padding:25px;
+  padding-right: 25px;
+  padding-top: 25px;
+}
+.wel {
+  display:block;
+  float: right;
+  max-height: 800px;
+  max-width: 800px;
+  background-color: rgba(240, 255, 255, 50%);
+  padding:50px;
+  padding-right: 50px;
+}
+.lil{
+  max-width: 50px;
+  max-height: 50px;
+}
+.contact {
+  margin: 0 auto;
+  max-height: 800px;
+  max-width: 700px;
+  background-color: rgba(240, 255, 255, 50%);
+  padding:25px;
+  
+  
+}
+#mapid { 
+  /* adjust map height in the media queries  */
+  margin: 0 auto;
+  height: 280px;
+  width: auto;
+  
+}
+
+iframe{
+  margin: 0 auto;
+  min-width: 700px;
+  min-height: 1000px;
+}
+
+.home{
+  padding:20px;
+}
+.text{
+  margin: 0 auto;
+  font-size: 45px;
+  max-width: 550px;
+  color: white;
+}
+.about{
+  padding:30px;
+}
+.resume{
+  margin: 0 auto ;
+  min-width: 700px;
+  min-height: 1200px;
+ display: flex;
+ justify-content: center;
+  
+}
+.logo {
+  max-width: 50px;
+  max-height: 50px;
+  display: block;
+  float: left;
+  margin-top: 80px;
+  padding-left: 50px;
+}
+.logo1{
+  z-index: 1;
+  max-width: 50px;
+  max-height: 50px;
+  padding-left: 10px;;
+}
+
+.container {
+  width: 720px;
+  margin: 35px auto; 
+  border: 1px solid black;
+  padding: 50px;
+  background-color: whitesmoke;
+}
+/* MEDIA QUERIES FROM SMALLEST TO LARGEST = MOBILE FIRST */
+/* Extra small devices (portrait phones, less than 576px)
+No media query for `xs` since this is the default */
+
+/* Small devices (landscape phones, 576px and up) */
+@media (max-width: 576px) { 
+  .me{
+    background: url(/Users/christinacolon/Desktop/i360/Final-ColonChristina/images/cc.jpg);
+    background-size: 110px;
+    min-height: 300px;
+    min-width: 300px;
+    border-radius: 50%;
+    border: solid black 5px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 294px;
+    vertical-align: auto;
+    position: absolute;
+  }
+}
+.container{
+  background-size: auto;
+}
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+.logo {
+  margin: 0 auto;
+}
+.menu-items {
+  widows: 100%;
+  justify-content: space-evenly;
+}
+.welcome{
+  display: flex;
+  flex-direction: column;
+  padding: 200px;
+}
+}
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+
+}
+
+/* Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+
+}
+
+
+/* MEDIA QUERIES FROM LARGEST TO SMALLEST */
+/* Extra small devices (portrait phones, less than 576px) */
+/* @media (max-width: 575.98px) {
+
+} */
+
+/* Small devices (landscape phones, less than 768px) */
+/* @media (max-width: 767.98px) {
+
+} */
+
+/* Medium devices (tablets, less than 992px) */
+/* @media (max-width: 991.98px) {
+
+} */
+
+/* Large devices (desktops, less than 1200px) */
+/* @media (max-width: 1199.98px) {
+
+} */
+
+/* Extra large devices (large desktops)
+No media query since the extra-large breakpoint has no upper bound on its width */
